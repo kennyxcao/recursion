@@ -6,6 +6,8 @@ describe('parseJSON', function() {
       var result = parseJSON(test);
       var expected = JSON.parse(test);
       var equality = _.isEqual(result, expected); // why can't we use `===` here?
+      if (!equality)
+        console.log('Parsed JSON - Expected: ' + expected + '/n Actual : ' + result);
       expect(equality).to.equal(true);
     });
   });
