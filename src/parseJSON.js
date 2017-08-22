@@ -109,7 +109,7 @@ var parseJSON = function(json) {
           next();
           return arr;        
         }
-        next();
+        next(',');
       }
     }
 
